@@ -1,0 +1,40 @@
+!
+h1
+h1+h2
+h1+h2+p*3
+h1{Hello}+p{wolrd}
+ul>li{hello}*5
+section>h2{hello}+p>span{hello}+p{hello}
+section>h2{hello}+p>span{hello}^p{hello}
+section>h2{hello}+(p>span{hello})+p{hello}
+table>(tr>td{hello}*3)+(tr>td{world}*3)
+table>(thead>tr>th{hello}*3)+(tbody>tr>td{world}*3)
+table>thead>tr>th{hello}*3^tbody>(tr>td{world}*3)*2
+h$*6
+h${hello}*6
+div.one.two
+div#one.two
+div.image$*3
+div.image$$*20
+table>(thead>tr>th{hello$}*3)+(tbody>(tr>td{world$@3}*3)*2)
+<table>
+    <thead>
+        <tr>
+            <th>hello1</th>
+            <th>hello2</th>
+            <th>hello3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>world3</td>
+            <td>world4</td>
+            <td>world5</td>
+        </tr>
+        <tr>
+            <td>world3</td>
+            <td>world4</td>
+            <td>world5</td>
+        </tr>
+    </tbody>
+</table>
