@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .sr-only {
+                position:absolute;
+                left:-9999px;
+                top:auto;
+                width:1px;
+                height:1px;
+                overflow:hidden;
+            }
+            main {
+                width: 350px;
+                height: 140px;
+                margin: 30px 25px;
+                border-radius: 5px;
+                border: 1px solid #DBDBDB;
+            }
+
+            .title {
+                width: 215px;
+                height: 15px;
+                margin-top: 19px;
+                margin-left: 16px;
+            }
+            .title h2 {
+                font-family: spoqa-han-sans-neo;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15.02px;
+                color: #000;
+            }
+            .button {                
+                width: 318px;
+                height: 40px;
+                margin: 16px auto;
+                background-color: #711bff;                
+            }
+            .button div {
+                width: 102px;
+                height: 18px;
+            }
+        </style>
+        <title>로그인</title>
+    </head>
+    <body>
+        <main>
+            <section class="title">
+                <h2>더 편리해진 위니브에 오신 것을 환영합니다.</h2>
+            </section>
+            <section class="button">
+                <h2 class="sr-only">로그인 버튼</h2>
+                <div>
+                    <span>
+                        <img src="./src/weniv-logo.png" alt="위니브">
+                        <span>로그인</span>
+                    </span>
+                </div>
+            </section>
+            <section>
+                <h2 class="sr-only">회원가입</h2>
+                <span>
+                    <img src="./src/icon-lock.png" alt="열쇠" width="16px" height="16px">
+                    <span>아이디 | 비밀번호찾기</span>
+                </span>
+                <span>
+                    <img src="./src/icon-user.png" alt="사람" width="16px" height="16px">
+                    <span>회원가입</span>
+                </span>
+            </section>
+        </main>
+        
+        <!-- 설명-->
+        <!-- 1. 로그인 박스라면, 위니브의 모든 페이지마다 들어갈 것 같은데? -->
+        <section>
+            <!-- 2. h1, h2 중 제목태그 뭘로 해주지? -->
+            <!-- 이 section은 페이지 내에 들어갈 것 같으니까, h1은 이 페이지 내에 존재할 것 같아. -->
+            <h2 class="sr-only">로그인</h2>
+            <!-- 3. 한줄을 다 차지하는 문장이네? 블럭요소가 필요하겠다. -->
+            <p>더 편리해진 위니브에 오신 것을 환영합니다.</p>
+            <!-- 4. 버튼일까, a태그일까? 시안이 다 완성되지 않은 상태에서 판단해보자. -->
+            <a href="./">
+                <img src="./src/weniv-logo.png" alt="weniv">
+                <!-- 5. 로고의 alt속성엔 회사명만 -->
+                로그인
+            </a>
+            <!-- 6. 아이디, 비밀번호찾기, 회원가입은 a인가 버튼인가... -->
+            <!-- 7. 아이콘은 뭔가. 어떻게 처리해야하는가 -->
+            <img src="./src/icon-lock.png" alt="">
+            <!-- img 태그의 alt 속성엔 뭘 넣어야하는가? -->
+            <a href="./">아이디</a>
+            <span>|</span>
+            <a href="./">비밀번호</a>
+            <a href="./">
+                <img src="./src/icon-user.png" alt="">
+                회원가입
+            </a>
+        </section>
+    </body>
+</html>
