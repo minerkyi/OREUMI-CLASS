@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>로그인 또는 회원가입</title>
+        <style>
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- h1은 모달 창의 부모페이지에 존재할 것으로 예상 -->
+        <div>
+            <header>
+                <h2>로그인 또는 회원가입</h2>
+                <button>
+                    <!-- 스크린리더: 닫기 > 버튼 -->
+                    <img src="./src/close.png" alt="">
+                    <span class="sr-only">닫기</span>
+                </button>
+            </header>
+            <section>
+                <h3 class="sr-only">로그인</h3>
+                <p>위니브에서 여러분의 궁금증을 해결하세요!:)</p>
+                <form action="">
+                    <input type="text" placeholder="아이디" name="id"><br>
+                    <input type="password" placeholder="비밀번호" name="pw"><br>
+                    <input type="checkbox" id="keepLogin" name="keep">
+                    <!-- 해당 input은 추후 화면에서 삭제되도록 처리함 -->
+                    <label for="keepLogin">
+                        <img src="./src/check-box.png" alt="">
+                        로그인 상태 유지
+                    </label><br>
+                    <button>로그인</button>
+                    <!-- form 태그 내부의 button의 기본 속성은 submit -->
+                </form>
+                <ul>
+                    <li><a href="">회원가입</a></li>
+                    <li><a href="">아이디/비밀번호 찾기</a></li>
+                </ul>
+            </section>
+            <span>또는</span>
+            <section>
+                <h3 class="sr-only">SNS 로그인</h3>
+                <ul>
+                    <li><a href="" target="_blank"><img src="./src/Google__G__Logo 1.png" alt="">구글 계정으로 로그인</a></li>
+                    <li><a href="" target="_blank"><img src="./src/facebook.png" alt="">페이스북 계정으로 로그인</a></li>
+                    <li><a href="" target="_blank"><img src="./src/naver-logo.png" alt="">네이버 계정으로 로그인</a></li>
+                    <li><a href="" target="_blank"><img src="./src/message-circle.png" alt="">카카오톡 계정으로 로그인</a></li>
+                </ul>
+            </section>
+        </div>
+    </body>
+</html>
