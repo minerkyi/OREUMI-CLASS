@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 선택자</title>
+        <style>
+            /* 전체 선택자, html 태그를 포함한 모든 태그 선택 */
+            * {
+                color: red;
+            }
+
+            /* 타입 선택자, html 태그 내에 있는 모든 동일한 태그를 선택 */
+            h1 {
+                color: blue;
+            }
+
+            /* id 선택자 */
+            #one {
+                color: green;
+            }
+
+            /* class 선택자 */
+            /* 하나의 요소에 여러 클래스 가능. 클래스 선택자 여러번 사용 가능 > 재사용성이 높음 */
+            .yellow {
+                color: yellow;
+            }
+
+            .blue {
+                background-color: blue;
+            }
+
+            /* 클래스명, 아이디명 작성규칙
+            1. 숫자로 시작 불간으
+            2. 하이픈, 언더바, 문자로만 시작 가능 */
+        </style>
+    </head>
+    <body>
+        <!-- 해시태그, two라는 id값을 가진 요소로 이동
+        id 속성값은 html 페이지 내에서 유일해야 함 -->
+        <a href="#two">여기를 클릭</a>
+        <h1>Hello World</h1>
+        <h1>Hello World</h1>
+        <h1>Hello World</h1>
+        <h2 id="one">Hello World</h2>
+        <h3 class="yellow blue">Hello World</h3>
+        <h4 class="blue">Hello World</h4>
+        <h5 class="yellow">Hello World</h5>
+        <h6 class="yellow">Hello World</h6>
+
+        <p id="two">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem sunt odio sit? Repudiandae quos error cum ullam sed ratione incidunt alias aliquam. Laborum omnis, quidem sint pariatur ea odio?
+        </p>
+    </body>
+</html>

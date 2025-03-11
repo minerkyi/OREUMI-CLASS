@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 구조적 가상 클래스 선택자</title>
+        <style>
+            /* 타입의 구조적 가상 클래스 선택자 */
+            div :nth-child(1) {
+                color: red;
+            }
+
+            /* div :nth-child(even) {
+                background-color: thistle;
+            } */
+
+            div :nth-child(2n) {
+                background-color: thistle;
+            }
+
+            /* div :nth-child(odd) {
+                background-color: aqua;
+            } */
+
+            div :nth-child(2n+1) {
+                background-color: aqua;
+            }
+
+            div :nth-child(-n+3) {
+                font-size: 32px;
+            }
+
+            /* 동일한 타입 요소 중 위치에 기반해서 선택 */
+            div p:nth-of-type(3) {
+                background-color: chocolate;
+            }
+
+            /* 유일하게 사용된 요소 선택 */
+            div :only-of-type {
+                color: blueviolet;
+            }
+
+            ul li:not(:first-child) {
+                color: blue;
+            }
+
+            ul li:nth-child(3) {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>첫 번째 문단</p>
+            <h2>첫 번째 제목</h2>
+            <p>두 번째 문단</p>
+            <p>세 번째 문단</p>
+            <span>Lorem ipsum dolor sit</span>
+        </div>
+
+        <ul>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+        </ul>
+    </body>
+</html>

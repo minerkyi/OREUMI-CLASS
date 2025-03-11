@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 가상 클래스</title>
+        <style>
+            /* 방문하지 않은 링크를 선택 */
+            a:link {
+                color: red;
+                background-color: blue;
+            }
+
+            /* 이미 방문한 링크를 선택 */
+            a:visited {
+                color: gray;
+                background-color: black;
+            }
+
+            /* 마우스가 올라간 상태의 요소 선택 */
+            a:hover,
+            p:hover {
+                font-size: 48px;
+            }
+
+            /* 마우스로 클릭하고 있는 상태의 요소 선택 */
+            a:active,
+            p:active {
+                background-color: violet;
+            }
+
+            a:focus {
+                border: 3px solid blue;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https://paullab.co.kr/about.html" class="unvisited">방문한 링크</a>
+        <a href="https://www.studyin.co.kr/" class="visited">방문하지 않은 링크</a>
+        <p>hello world</p>
+    </body>
+</html>

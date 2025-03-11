@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 속성 선택자</title>
+        <style>
+            /* 속성 선택자, 해당 속성을 가진 요소를 선택 */
+            [title] {
+                color: red;
+            }
+
+            /* 해당 속성에 해당 속성값을 가진 요소 선택 */
+            [title="hello"] {
+                background-color: thistle;
+            }
+
+            [class~="btn"] {
+                color: blue;
+            }
+
+            [class|="btn"] {
+                background-color: turquoise;
+            }
+
+            [class^="btn"] {
+                border: 3px solid salmon;
+            }
+
+            [class$="btn"] {
+                font-size: 32px;
+            }
+
+            [class*="btn"] {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <p title="hello">hello world</p>
+        <p title="world">hello world</p>
+        <p class="btn primary">hello world</p>
+        <p class="secondary-btn">hello world</p>
+        <p class="btn tertiary">hello world</p>
+        <p class="btn-red">hello world</p>
+        <p class="btn">hello world</p>
+    </body>
+</html>

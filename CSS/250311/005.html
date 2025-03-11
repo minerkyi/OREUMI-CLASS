@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 복합선택자</title>
+        <style>
+            /* 자손 선택자 */
+            section p {
+                font-size: 32px;
+            }
+
+            /* 자식 선택자, 요소의 직계 자식요소만 선택 */
+            section > p {
+                color: red;
+            }
+
+            /* 일반 형제 선택자, 형제 요소 중 뒤에 나오는 요소들 선택 */
+            section ~ p {
+                background-color: yellowgreen;
+            }
+
+            /* 인접 형제 선택자, 형제 요소 중 바로 뒤에 나오는 요소만 선택 */
+            section + p {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <p>lorem ipsum dolor sit amet</p>
+        <p>lorem ipsum dolor sit amet</p>
+        <p>lorem ipsum dolor sit amet</p>
+        <section>
+            <div>
+                <p>lorem ipsum dolor sit amet</p>
+            </div>
+            <p>lorem ipsum dolor sit amet</p>
+            <p>lorem ipsum dolor sit amet</p>
+        </section>
+        <p>lorem ipsum dolor sit amet</p>
+        <p>lorem ipsum dolor sit amet</p>
+        <p>lorem ipsum dolor sit amet</p>
+    </body>
+</html>

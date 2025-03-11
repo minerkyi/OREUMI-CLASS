@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 상속</title>
+        <style>
+            section {
+                /* 텍스트와 관련된 속성들만 상속 */
+                color: red;
+                /* 레이아웃에 관련된 속성들은 상속되지 않음 */
+                border: 3px solid blue;
+            }
+
+            div {
+                /* 부모의 속성을 상속받음. 주로 상속되지 않는 속성을 지정할 때 사용 */
+                border: inherit;
+                /* 각 속성의 초기값으로 변경 */
+                color: initial;
+                /* 자연적으로 상속되는 속성이라면 inherit처럼 작동 그렇지 않다면 initial처럼 작동 */
+                /* color: unset; */
+                /* border: unset; */
+                /* 자연적으로 상속되는 속성이라면 inherit처럼 작동 그렇지 않다면 강제 상속되지 않음. */
+                color: revert;
+                border: revert;
+                /* 모든 속성에 대한 상속값을 한번에 지정 */
+                all: initial;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            부모
+            <div>자식 1</div>
+            <h1>h1</h1>
+            <h2>h2</h2>
+        </section>
+
+        <h1>h1</h1>
+        <h2>h2</h2>
+    </body>
+</html>
