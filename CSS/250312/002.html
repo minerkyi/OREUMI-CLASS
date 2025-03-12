@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 텍스트 관련</title>
+        <style>
+            html {
+                font-size: 10px;
+            }
+
+            .rem {
+                font-size: 2rem;
+            }
+
+            .em {
+                font-size: 16px;
+            }
+
+            .em div {
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- root em의 약자. <html>태그의 폰트사이즈 기준 -->
+        <div class="rem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quo quasi, animi pariatur minus autem voluptatibus voluptatem ex quidem et, velit nihil dolorem explicabo quas dignissimos sint nostrum rerum similique?
+        </div>
+
+        <!-- 부모 요소의 폰트사이즈 기준 -->
+        <div class="em">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quo quasi, animi pariatur minus autem voluptatibus voluptatem ex quidem et, velit nihil dolorem explicabo quas dignissimos sint nostrum rerum similique?
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit autem accusantium quas doloremque eum nemo nisi quam? Doloremque autem, eaque porro blanditiis nulla temporibus asperiores ducimus perspiciatis fugit! Quis, dolorum.
+            </div>
+        </div>
+    </body>
+</html>

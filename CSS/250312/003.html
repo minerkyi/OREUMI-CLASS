@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 색상 관련</title>
+        <style>
+            p {
+                /* 키워드 */
+                color: red;
+                color: blue;
+
+                /* 16진수 HEX코드 */
+                /* #RRGGBB 구조, 각 자릿수를 0부터 f까지의 16진수로 표현 */
+                color: #ffffff; /* #fff */
+                color: #000000; /* #000 */
+                color: #ff0000; /* #f00 */
+
+                /* RGB 레드, 그린, 블루를 0부터 255까지의 정수 값으로 표현 */
+                color: rgb(255, 0, 0);
+                color: rgb(0, 255, 0);
+                color: rgb(0, 0, 255);
+                color: rgb(0, 0, 0);
+
+                /* RGBA 마지막 값을 0~1 사이의 수수점으로 표현, 숫자가 낮을 수록 투명 */
+                color: rgba(255, 0, 0, 0.5);
+                /* 현재 색상 상속 받아 다른 속성에서 사용 */
+                border: 10px solid currentColor;
+
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            orem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nemo! Repellendus similique porro dicta consequuntur dolor facere recusandae, consequatur quia ut consectetur ad expedita sed voluptate in eum nisi quidem.
+        </p>
+    </body>
+</html>

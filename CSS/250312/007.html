@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 행간 조정</title>
+        <style>
+            p {
+                /* 행간 조정. 1.5~2 사이가 좋은 가독성 */
+                line-height: 2;
+                line-height: 20px;
+
+                letter-spacing: 20px;
+            }
+
+            span {
+                line-height: 2.5;
+                background-color: orange;
+            }
+
+            span > span {
+                line-height: 1;
+                background-color: yellow;
+            }
+
+            .baseline {
+                vertical-align: baseline;
+            }
+
+            .sub {
+                vertical-align: sub;
+            }
+
+            .super {
+                vertical-align: super;
+            }
+
+            .top {
+                vertical-align: top;
+            }
+
+            .middle {
+                vertical-align: middle;
+            }
+
+            .bottom {
+                vertical-align: bottom;
+            }
+
+            .text-top {
+                vertical-align: text-top;
+            }
+
+            .text-bottom {
+                vertical-align: text-bottom;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id maiores sit ipsum tenetur fugiat saepe, aut culpa eos nesciunt error sunt? Possimus temporibus nesciunt ratione libero sint nihil voluptates quisquam!
+        </p>
+
+        <span>
+            텍스트
+            <span class="box baseline">baseline</span>
+        </span>
+        <span>
+            텍스트
+            <span class="box sub">sub</span>
+        </span>
+        <span>
+            텍스트
+            <span class="box super">super</span>
+        </span>
+        <span>
+            텍스트
+            <span class="box top">top</span>
+        </span>
+        <span>
+            텍스트
+            <span class="box middle">middle</span>
+        </span>
+        <span>
+            텍스트
+            <span class="box bottom">bottom</span>
+        </span>
+        <span>
+            텍스트
+            <span class="box text-top">text-top</span>
+        </span>
+        <span>
+            텍스트
+            <span class="box text-bottom">text-bottom</span>
+        </span>
+    </body>
+</html>
