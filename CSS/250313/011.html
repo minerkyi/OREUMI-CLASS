@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS img vs background-image</title>
+        <style>
+            div {
+                width: 300px;
+                height: 300px;
+                /* background-image: url(./src/image.png);
+                background-repeat: no-repeat;
+                background-size: contain; */
+            }
+
+            div::before {
+                content: "";
+                display: block;
+                height: 300px;
+                background-image: url(./src/image.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 문맥상 필요한 정보가아닌 단순한 디자인적 장식요소 -->
+        <div></div>
+        <!-- 문맥상 꼭 필요한 정보를 제공할 때 -->
+        <img src="./src/image.png" alt="울고있는 사막여우">
+        <article>
+            <h2>울고있는 사막여우</h2>
+            <img src="./src/image.png" alt="">
+        </article>
+    </body>
+</html>

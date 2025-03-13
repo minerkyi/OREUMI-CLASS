@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 이미지 비율 유지하기</title>
+        <style>
+            /* aspect-ratio 사용하는 방법 */
+            /* img {
+                width: 200px;
+                aspect-ratio: 3 / 4;
+                object-fit: cover;
+            } */
+
+            /* padding 백분율을 사용하는 방법 */
+            .thumbnail {
+                height: 0;
+                padding-top: 50%;
+                position: relative;
+            }
+
+            .thumbnail img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 0 -200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="thumbnail">
+            <img src="https://fastly.picsum.photos/id/999/600/500.jpg?hmac=qBy-pPNBXrrjB8-Db_f3x-OBtHnS5hZVnLOnG_DydPY" alt="">
+        </div>
+    </body>
+</html>

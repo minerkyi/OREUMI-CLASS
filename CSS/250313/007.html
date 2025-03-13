@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS background-size</title>
+        <style>
+            div {
+                width: 1000px;
+                height: 1000px;
+                border: solid 10px black;
+                background-image: url("https://fastly.picsum.photos/id/227/400/800.jpg?hmac=10xN26Q7r6Zbcfr-K0ytYsvlFgxgNf-tJWAmtnsc65k");
+                background-repeat: no-repeat;
+
+                /* 배경 이미지 크기 조절 */
+                /* 가로, 세로 크기 지정. 상대단위/절대단위 모두 사용 가능 */
+                background-size: 500px 700px;
+                /* 여백 발생 가능성 o, 이미지 비율 유지, 이미지 잘리지 않음 */
+                background-size: contain;
+                /* 여백 발생 가능성 x, 이미지 비율 유지, 이미지 잘릴 가능성 o */
+                /* background-size: cover; */
+
+                /* 좌측 상단에서 얼마나 떨어질지 위치 조절, 가로 세로 */
+                background-position: 20px 50px;
+                background-position: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

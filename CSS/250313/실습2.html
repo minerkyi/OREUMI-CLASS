@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 박스 만들기 실습</title>
+        <style>
+            div {
+                width: 200px;
+                height: 100px;
+                font-size: 30px;
+                color: white;
+                text-align: center;
+            }
+
+            .box1 {
+                background-color: slategray;
+                border: solid 10px black;
+                overflow: hidden;
+            }
+            .box1 div {
+                background-color: rgb(57, 64, 71);
+                padding: 20px 0;
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+
+            .box2 {
+                border: dashed 10px thistle;
+                border-radius: 60px;
+            }
+
+            .box2 div {
+                border-radius: 50px;
+                background-color: cornflowerblue;
+                padding: 25px 0;
+                box-sizing: border-box;
+            }
+
+            .box3 {
+                color: black;
+                background-color: white;
+                border: solid 5px lightgray;
+                border-radius: 0 50px 50px 50px;
+                box-shadow: 10px 12px 10px 1px lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+            <div>Hello🦊</div>
+        </div>
+        <br>
+        <div class="box2">
+            <div>Hello🦊</div>
+        </div>
+        <br>
+        <div class="box3">
+            <p>Hello🦊</p>
+        </div>
+        <br>
+    </body>
+</html>

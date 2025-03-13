@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS background-color</title>
+        <style>
+            div {
+                width: 1000px;
+                height: 1000px;
+                border: solid 10px black;
+                background-image: url(./src/image.png);
+
+                /* 배경 이미지를 반복하는 방식 */
+                /* 반복x */
+                background-repeat: no-repeat;
+                /* x축으로만 반복 */
+                background-repeat: repeat-x;
+                /* y축으로만 반복 */
+                background-repeat: repeat-y;
+                /* 이미지 크기조절x, 동일한 여백을 두고 반복 */
+                background-repeat: space;
+                /* 이미지 크기조절, 여백 없이 반복 */
+                background-repeat: round;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

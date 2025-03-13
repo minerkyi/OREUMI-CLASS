@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS background-attachment</title>
+        <style>
+            div {
+                width: 1000px;
+                height: 1000px;
+                border: solid 10px black;
+                background-image: url("https://fastly.picsum.photos/id/227/400/800.jpg?hmac=10xN26Q7r6Zbcfr-K0ytYsvlFgxgNf-tJWAmtnsc65k");
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                font-size: 48px;
+                /* 스크롤 시 배경 이미지가 함께 스크롤 */
+                /* background-attachment: scroll; */
+                /* 뷰포트에 고정, 스크롤해도 이미지는 움직이지 않음 */
+                background-attachment: fixed;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut vero cupiditate, reprehenderit neque earum mollitia et, illo provident nostrum nesciunt nisi temporibus nulla excepturi. Tempora inventore adipisci ducimus sapiente non.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut vero cupiditate, reprehenderit neque earum mollitia et, illo provident nostrum nesciunt nisi temporibus nulla excepturi. Tempora inventore adipisci ducimus sapiente non.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut vero cupiditate, reprehenderit neque earum mollitia et, illo provident nostrum nesciunt nisi temporibus nulla excepturi. Tempora inventore adipisci ducimus sapiente non.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut vero cupiditate, reprehenderit neque earum mollitia et, illo provident nostrum nesciunt nisi temporibus nulla excepturi. Tempora inventore adipisci ducimus sapiente non.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut vero cupiditate, reprehenderit neque earum mollitia et, illo provident nostrum nesciunt nisi temporibus nulla excepturi. Tempora inventore adipisci ducimus sapiente non.
+        </div>
+    </body>
+</html>

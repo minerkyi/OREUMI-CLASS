@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS box-shadow</title>
+        <style>
+            div {
+                width: 200px;
+                height: 200px;
+                background-color: rgb(182, 225, 252);
+
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+
+                /* 1 완전 불투명 */
+                /* opacity: 0.7;
+                opacity: 0.3; */
+
+                /* 요소 내부 컨텐츠는 투명해지지 않는 것을 원한다면 아래 방식 */
+                background-color: rgba(63, 166, 255, 0.3);
+            }
+        </style>
+    </head>
+    <body>
+        <div>Hello World</div>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 마진 병합</title>
+        <style>
+            .A {
+                width: 100px;
+                height: 300px;
+                background-color: lightgray;
+            }
+
+            .B, .C {
+                width: 100px;
+                height: 100px;
+                background-color: lightcoral;
+                /* 인접요소 마진병합현상 해결방법 */
+                /* display: inline-block; */
+            }
+
+            .B {
+                margin-bottom: 100px;
+            }
+
+            .C {
+                margin-top: 50px;
+            }
+
+            .parent {
+                width: 200px;
+                background-color: lightgray;
+                margin-top: 100px;
+
+                /* 마진병합 현상 해결방안 */
+                /* overflow: auto; */
+                /* display: inline-block; */
+                /* border: solid 1px black; */
+                /* padding: 10px; */
+                /* display: flow-root; */
+            }
+
+            .child {
+                width: 100px;
+                height: 100px;
+                background-color: lightcoral;
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="A">
+            <div class="B"></div>
+            <div class="C"></div>
+        </div>
+
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </body>
+</html>

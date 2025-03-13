@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS background-clip</title>
+        <style>
+            div {
+                width: 1000px;
+                height: 1000px;
+                border: dotted 30px black;
+                background-color: aqua;
+
+                /* 배경이 어디까지 차지할 것인지 */
+                /* 기본 값, border 영역까지 배경이 차지 */
+                background-clip: border-box;
+                padding: 40px;
+                /* padding 영역까지 배경이 차지 */
+                background-clip: padding-box;
+                /* 요소가 차지하는 영역까지 배경이 차지 */
+                background-clip: content-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        </div>
+    </body>
+</html>

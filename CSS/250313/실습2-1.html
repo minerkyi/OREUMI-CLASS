@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 박스 만들기 실습</title>
+        <style>
+            div {
+                padding: 10px 20px;
+                display: inline-block;
+            }
+
+            .box1 {
+                background-color: rgb(72, 82, 92);
+                color: white;
+                /* border: solid 5px black;
+                box-shadow: inset 5px 5px lightslategray; */
+                border-top: solid 5px lightslategray;
+                border-left: solid 5px lightslategray;
+                outline: solid 5px black;
+            }
+
+            .box2 {
+                background: linear-gradient(90deg, purple 0%, blue 100%);
+                color: white;
+                border-radius: 50px;
+                border: 5px dashed lavender;
+                background-clip: padding-box;
+            }
+
+            .box3 {
+                border: solid 2px lightsteelblue;
+                border-radius: 0 50px 50px 50px;
+                box-shadow: 5px 5px 5px 0 #eee;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">Hello🦊</div>
+        <div class="box2">Hello🦊</div>
+        <div class="box3">Hello🦊</div>
+    </body>
+</html>
