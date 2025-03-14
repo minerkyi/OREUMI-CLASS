@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS float</title>
+        <style>
+            .container {
+                border: solid 5px lightblue;
+
+                /* 모든 자식 요소가 float 속성을 가질 때 부모 요소는 자식 요소의 높이를 인식 못함 */
+                /* 해결방법 1. 유연성이 떨어지므로 권장하지 않음 */
+                /* height: 300px; */
+
+                /* 해결방법 2 */
+                /* overflow: hidden; */
+            }
+
+            .clearfix::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            img {
+                float: left;
+                width: 100px;
+            }
+
+            h2 {
+                float: right;
+            }
+
+            p {
+                /* clear: both; */
+                /* clear: left; */
+                /* clear: right; */
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container clearfix">
+            <h2>hello</h2>
+            <img src="./src/weniv-binky.png" alt="">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, non aliquam exercitationem ducimus, veniam distinctio omnis cum magni deleniti porro neque ex officiis repellat sequi! Aut inventore sunt numquam quasi? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita at, mollitia voluptatibus aspernatur accusamus iusto officia eius incidunt minima quae maiores neque quibusdam sed illo vero culpa eligendi quod a?
+            </p>
+        </div>
+    </body>
+</html>

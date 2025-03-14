@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 이미지 비율 실습 풀이</title>
+        <style>
+            .ratio img {
+                width: 30%;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+
+            .percent {
+                width: 30%;
+                display: inline-block;
+                height: 0;
+                padding-top: 15%;
+                position: relative;
+            }
+
+            .percent img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ratio">
+            <img src="./src/weniv-binky.png" alt="">
+            <img src="./src/weniv-chilli.png" alt="">
+            <img src="./src/weniv-garry.png" alt="">
+            <img src="./src/weniv-licat.png" alt="">
+            <img src="./src/weniv-suri.png" alt="">
+            <img src="./src/weniv-wade.png" alt="">
+        </div>
+
+        <div class="percent"><img src="./src/weniv-binky.png" alt=""></div>
+        <div class="percent"><img src="./src/weniv-chilli.png" alt=""></div>
+        <div class="percent"><img src="./src/weniv-garry.png" alt=""></div>
+        <div class="percent"><img src="./src/weniv-licat.png" alt=""></div>
+        <div class="percent"><img src="./src/weniv-suri.png" alt=""></div>
+        <div class="percent"><img src="./src/weniv-wade.png" alt=""></div>
+    </body>
+</html>
