@@ -20,7 +20,13 @@
 body {
     font-family: "Pretendard-Regular", sans-serif;
     color: var(--main-color);
-    background-color: #eee;
+    background-color: #fff;
+    width: 1728px;
+}
+
+section.container {
+    width: 1224px;
+    margin: 118px auto 0;
 }
 
 /* 공통 속성 */
@@ -29,7 +35,6 @@ article {
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
-    margin: 20px;
 }
 
 .read-more {
@@ -54,37 +59,46 @@ article {
     clear: both;
 }
 
-/* card1 */
-
-.card1 img {
-    width: 100%;
-    aspect-ratio: 288/196;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
+/* header */
+.header {
+    height: 32px;
 }
 
-.text-group {
-    padding: 20px 16px 16px;
+.header h2 {
+    width: 78px;
+    font-family: "Pretendard-Bold";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    padding: 6px 0;
+    float: left;
 }
 
-.text-group h2 {
-    font-family: "Pretendard-Bold", sans-serif;
+.header img{
+    float: right;
 }
 
-.text-group p {
-    margin: 16px 0;
-    font-size: 12px;
-    line-height: 160%;
-    color: var(--sub-color);
+/* section list */
+.list {
+    margin-top: 32px;
 }
 
-/* card2 */
+/* card */
+.card {
+    margin-right: 24px;
+    float: left;
+}
 
-.card2 header {
+.card:last-child {
+    margin-right: 0;
+}
+
+.card header {
     padding: 16px 16px 12px;
 }
 
-.card2 header img {
+.card header img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -92,27 +106,27 @@ article {
     margin-right: 16px;
 }
 
-.card2 header div {
+.card header div {
     padding: 3px 0;
 }
 
-.card2 header h2 {
+.card header h2 {
     font-family: "Pretendard-Bold", sans-serif;
     margin-bottom: 1px;
 }
 
-.card2 header p {
+.card header p {
     font-size: 12px;
     color: var(--sub-color);
 }
 
-.card2 .thumbnail {
+.card .thumbnail {
     width: 100%;
     aspect-ratio: 288px/196px;
     object-fit: cover;
 }
 
-.card2 .content {
+.card .content {
     padding: 10px 16px 16px;
 }
 
@@ -123,13 +137,13 @@ article {
     margin-bottom: 12px;
 }
 
-.card2 .read-more {
+.card .read-more {
     position: relative;
     margin-top: 4px;
     float: left;
 }
 
-.card2 .read-more::after {
+.card .read-more::after {
     content: "";
     display: block;
     width: 4px;
@@ -143,21 +157,21 @@ article {
     transform: translate(-6px, -50%) rotate(45deg);
 }
 
-.card2 .btn-group {
+.card .btn-group {
     float: right;
 }
 
-.card2 .btn-group button {
+.card .btn-group button {
     width: 32px;
     height: 32px;
     float: left;
 }
-.card2 .btn-group img {
+.card .btn-group img {
     width: 32px;
     height: 32px;
 }
 
-.card2 .btn-group :nth-child(3),
-.card2 .btn-group :nth-child(2) {
+.card .btn-group :nth-child(3),
+.card .btn-group :nth-child(2) {
     margin-left: 8px;
 }

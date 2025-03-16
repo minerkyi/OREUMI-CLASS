@@ -4,8 +4,43 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CSS float 레이아웃 연습</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        
+        <section class="container">
+            <header>
+                <h1>Float 레이아웃 연습</h1>
+                <p>웹 페이지 레이아웃에서 float 속성을 활용하는 방법을 배워봅시다.</p>
+            </header>
+            <main>
+                <section class="side">
+                    <h2>사이드바</h2>
+                    <p>
+                        이 영역은 왼쪽에 float 되었습니다.
+                        width: 30%로 설정되어 있습니다.
+                    </p>
+                </section>
+                <section class="content">
+                    <h2>메인 콘텐츠</h2>
+                    <p>
+                        이 영역은 왼쪽에 float 되었습니다.
+                        <br>
+                        width: 70&로 설정되어 있습니다.
+                    </p>
+                    <div class="clearfix">
+                        <div class="box1">박스 1</div>
+                        <div class="box2">박스 2</div>
+                        <div class="box3">박스 3</div>
+                    </div>
+                    <p>
+                        위의 박스들은 float: left로 설정되었고,clearfix를 사용하여 float을 해제했습니다.
+                    </p>
+                </section>
+                <section class="footer">
+                    <p>푸터 영역 - clear: both를 사용하여 float을 해제했습니다.</p>
+                </section>
+            </main>
+        </section>
     </body>
 </html>
