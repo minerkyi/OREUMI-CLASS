@@ -20,7 +20,7 @@
 body {
     font-family: "Pretendard-Regular", sans-serif;
     color: var(--main-color);
-    background-color: #fff;
+    background-color: #fffeee;
     width: 1728px;
 }
 
@@ -35,6 +35,7 @@ article {
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 32px;
 }
 
 .read-more {
@@ -79,15 +80,14 @@ article {
     float: right;
 }
 
-/* section list */
-.list {
-    margin-top: 32px;
-}
-
 /* card */
 .card {
-    margin-right: 24px;
+    margin-left: 24px;
     float: left;
+}
+
+.card:nth-child(4n+1) {
+    margin-left: 0;
 }
 
 .card:last-child {
