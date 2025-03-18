@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS flex 실습2</title>
+        <style>
+            .main {
+                display: flex;
+                flex-direction: column;
+                height: 100px;
+                color: #fff;
+                font-size: 26px;
+                font-weight: 700;
+                text-align: center;
+                line-height: 100px;
+            }
+
+            .main > * {
+                border: 10px solid #2E504F;
+            }
+
+            header {
+                background-color: #E392C0;
+            }
+
+            .container {
+                display: flex;
+                height: 300px;
+                line-height: 300px;
+                border-top: 0px;
+                border-bottom: 0px;
+            }
+
+            section {
+                background-color: #87A8E7;
+                flex-grow: 3;
+                border-right: 10px solid #2E504F;;
+            }
+
+            aside {
+                background-color: #67D7D0;
+                flex-grow: 1;
+            }
+
+            footer {
+                background-color: #786AC7;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <header>header</header>
+            <div class="container">
+                <section>section</section>
+                <aside>aside</aside>
+            </div>
+            <footer>footer</footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS grid</title>
+        <style>
+            .container {
+                height: 100vh;
+                background-color: #eee;
+                display: grid;
+
+                /* 열방향 그리드 트랙 사이즈 설정 */
+                grid-template-columns: 100px 200px 300px;
+                grid-template-columns: 10% 20% 30%;
+                grid-template-columns: 1fr 2fr 3fr;
+
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                /* 반복할 횟수, 반복할 값 */
+                grid-template-columns: repeat(6, 1fr);
+                /* 고정값과 fr단위를 함께 사용하면 고정된 요소, 나머지 뷰포트의 너비를 꽉 채우는 UI */
+                grid-template-columns: 1fr 200px;
+
+                /* 최소값, 최대값의 범위를 지정 */
+                grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+                grid-template-columns: repeat(minmax(100px, 1fr));
+
+                grid-template-rows: 100px 200px 300px;
+                grid-template-columns: 10% 20% 30%;
+                grid-template-columns: 1fr 2fr 3fr 4fr;
+            }
+
+            .item {
+                background-color: lightblue;
+                border: solid 1px black;
+                font-size: 32px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+        </div>
+    </body>
+</html>

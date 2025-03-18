@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #eee;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+article {
+    width: 400px;
+    height: 200px;
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    background-color: #fff;
+}
+
+section {
+    width: 350px;
+    height: 140px;
+    border-radius: 5px;
+    border: 1px solid #DBDBDB;
+    position: relative;
+    top: 30px;
+    left: 25px;
+}
+
+section > p {
+    width: 215px;
+    height: 15px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: 19px;
+    margin-left: 16px;
+}
+
+.login {
+    width: 318px;
+    height: 40px;
+    background-color: #711BFF;
+    width: 318;
+    border-radius: 4px;
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login span {
+    color: white;
+    text-align: center;
+    font-weight: 500;    
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+    display: inline-block;
+}
+
+footer {
+    width: 318px;
+    height: 16px;
+    margin-left: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.find, .reg {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #767676;
+}
+
+.find {
+    width: 133px;
+    height: 16px;
+}
+
+.reg {
+    width: 65px;
+    height: 16px;
+}
+
+img {
+    vertical-align: text-top;
+}

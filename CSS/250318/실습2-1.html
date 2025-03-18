@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS flex 실습2 풀이</title>
+        <style>
+            .main {
+                background-color: black;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            header,
+            footer {
+                height: 100px;
+            }
+
+            header,
+            section,
+            aside,
+            footer {
+                background-color: lightcoral;
+                font-size: 32px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container {
+                height: 400px;
+                display: flex;
+                gap: 10px;
+            }
+
+            section {
+                flex-grow: 1;
+            }
+
+            aside {
+                flex-basis:  250px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <header>header</header>
+            <div class="container">
+                <section>section</section>
+                <aside>aside</aside>
+            </div>
+            <footer>footer</footer>
+        </div>
+    </body>
+</html>
