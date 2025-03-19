@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS transition</title>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            .container div {
+                width: 100px;
+                height: 100px;
+                background-color: lightgreen;
+            }
+
+            .container div:hover {
+                background-color: lightcoral;
+                transform: scale(2);
+                font-size: 2em;
+                transform-origin: left top;
+                transition-duration: 2s;
+            }
+
+            .item2 {
+                transition-duration: 3s;
+                transition-property: background-color;
+                transition-property: all;
+            }
+
+            .item3 {
+                transition-timing-function: ease;
+            }
+
+            .item4 {
+                transition-timing-function: linear;
+            }
+
+            .item5 {
+                transition-timing-function: ease-in;
+            }
+
+            .item6 {
+                transition-timing-function: ease-out;
+            }
+
+            .item7 {
+                transition-timing-function: ease-in-out;
+            }
+
+            .item8 {
+                transition-timing-function: cubic-bezier(0.73, 2.18, 0, 1.31);
+            }
+
+            .item9 {
+                transition-timing-function: steps(5);
+            }
+
+            .item10 {
+                transition-delay: 3s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item1">normal</div>
+            <div class="item2">property, duration</div>
+            <div class="item3">ease</div>
+            <div class="item4">linear</div>
+            <div class="item5">ease-in</div>
+            <div class="item6">ease-out</div>
+            <div class="item7">ease-in-out</div>
+            <div class="item8">cubit-bezier</div>
+            <div class="item9">steps</div>
+            <div class="item10">delay</div>
+        </div>
+    </body>
+</html>

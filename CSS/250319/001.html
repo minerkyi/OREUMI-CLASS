@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS grid</title>
+        <style>
+            .container {
+                height: 100vh;
+                background-color: #eee;
+                display: grid;
+                grid-template-columns: repeat(3, 100px);
+                grid-template-rows: repeat(3, 100px);
+
+                /* 트랙단위 수평, 수직 정렬 */
+                justify-content: center;
+                align-content: center;
+
+                /* 셀 내 아이템 수평, 수직 정렬 */
+                justify-items: center;
+                align-items: center;
+            }
+
+            .item {
+                width: 50px;
+                height: 50px;
+                background-color: lightgreen;
+                font-size: 32px;
+                border: 2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+        </div>
+    </body>
+</html>

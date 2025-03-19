@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS grid</title>
+        <style>
+            .container {
+                width: 600px;
+                height: 600px;
+
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .container div {
+                font-size: 48px;
+                opacity: 0.8;
+            }
+
+            .item1 {
+                background-color: lawngreen;
+                grid-area: 1/1/3/3;
+                z-index: 20;
+            }
+            .item2 {
+                background-color: lightblue;
+                grid-area: 1/2/3/3;
+                z-index: 10;
+            }
+            .item3 {
+                background-color: lightcoral;
+                grid-area: 2/1/3/3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item1">item1</div>
+            <div class="item2">item2</div>
+            <div class="item3">item3</div>
+        </div>
+    </body>
+</html>

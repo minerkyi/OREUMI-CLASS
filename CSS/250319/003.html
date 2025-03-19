@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS grid</title>
+        <style>
+            .container {
+                width: 600px;
+                height: 600px;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+
+                grid-template-areas:
+                "header header header header header "
+                "section1 section1 section1 section1 aside"
+                "section2 section2 section3 section3 aside"
+                "section2 section2 section3 section3 aside"
+                "footer footer footer footer footer"
+                ;
+            }
+
+            .item1 {
+                background-color: lightgreen;
+                grid-area: header;
+            }
+            .item2 {
+                background-color: lightblue;
+                grid-area: section1;
+            }
+            .item3 {
+                background-color: lightcoral;
+                grid-area: section2;
+            }
+            .item4 {
+                background-color: lightseagreen;
+                grid-area: section3;
+            }
+            .item5 {
+                background-color: lightgoldenrodyellow;
+                grid-area: aside;
+            }
+            .item6 {
+                background-color: lightslategray;
+                grid-area: footer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item1">item1</div>
+            <div class="item2">item2</div>
+            <div class="item3">item3</div>
+            <div class="item4">item4</div>
+            <div class="item5">item5</div>
+            <div class="item6">item6</div>
+        </div>
+    </body>
+</html>

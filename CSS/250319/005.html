@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS grid</title>
+        <style>
+            .container {
+                width: 600px;
+                height: 600px;
+
+                display: grid;
+                grid-template-columns: repeat(3, 100px);
+            }
+
+            .container div {
+                width: 50px;
+                height: 50px;
+            }
+
+            .item1 {
+                background-color: lightgreen;
+
+                align-self: center;
+                justify-self: center;
+
+                /* align-self justify-self 단축 속성 */
+                place-self: center center;
+                order: 6;
+            }
+            .item2 {
+                background-color: lightblue;
+                order: 5;
+            }
+            .item3 {
+                background-color: lightcoral;
+                order: 4;
+            }
+            .item4 {
+                background-color: lightseagreen;
+                order: 3;
+            }
+            .item5 {
+                background-color: lightgoldenrodyellow;
+                order: 2;
+            }
+            .item6 {
+                background-color: lightslategray;
+                order: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item1">item1</div>
+            <div class="item2">item2</div>
+            <div class="item3">item3</div>
+            <div class="item4">item4</div>
+            <div class="item5">item5</div>
+            <div class="item6">item6</div>
+        </div>
+    </body>
+</html>
