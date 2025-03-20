@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS perspective</title>
+        <style>
+            .container {
+                display: flex;
+                padding: 50px;
+                background-color: lightgoldenrodyellow;
+
+                /* 3D 공간의 깊이(Z축 선상의 사용자ㅏ의 위치) 지정 */
+                /* 값이 적을 수록 왜곡이 심하고 값이 클 수록 덜함 */
+                perspective: 500px;
+                /* perspective: 100px;
+                perspective: 1000px; */
+            }
+
+            .item {
+                width: 150px;
+                height: 100px;
+                background-color: lightseagreen;
+                border: solid 1px black;
+
+                transform: rotateY(90deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS animation 실습1 풀이</title>
+        <style>
+            @keyframes cafe {
+                100% {
+                    background-position: right bottom;
+                }
+            }
+
+            .cafe {
+                width: 113px;
+                height: 176px;
+                background: url(./images/building1.png) no-repeat 0 0 / auto 100%;
+
+                animation-name: cafe;
+                animation-duration: 5s;
+                animation-timing-function: steps(33);
+                animation-iteration-count: infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cafe"></div>
+    </body>
+</html>

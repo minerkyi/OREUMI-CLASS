@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS animation</title>
+        <style>
+            @keyframes bulid-cafe {
+                100% {
+                    background-position: right bottom;
+                }
+            }
+
+            .box {
+                width: 115px;
+                height: 176px;
+                background-image: url(./images/building1.png);
+                background-repeat: no-repeat;
+                background-size: auto 100%;
+                background-position: left top;
+                animation-name: bulid-cafe;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: steps(33);
+                animation-fill-mode: forwards;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>

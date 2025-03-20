@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS perspective scaleZ</title>
+        <style>
+            .container {
+                width: 300px;
+                padding: 100px;
+                border: 1px solid #ccc;
+            }
+                
+            .box {
+                float: left;
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+            }
+                /* 완전히 동일한 조건에서의 모습을 보기 위해 세 요소 모두 별도의 동일한 원근감을 줍니다. */
+            .box1 {
+                transform: perspective(300px) scaleZ(1) rotateY(75deg);
+            }
+                
+            .box2 {
+                transform: perspective(300px) scaleZ(2) rotateY(75deg);
+            }
+                
+            .box3 {
+                transform: perspective(300px) scaleZ(4) rotateY(75deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+        </div>
+    </body>
+</html>

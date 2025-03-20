@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS animation cat 실습 풀이</title>
+        <style>
+            @keyframes move-cat {
+                0% {
+                    background-image: url(./images/cat/1.png);
+                }
+                20% {
+                    transform: translateX(-100px);
+                    background-image: url(./images/cat/2.png);
+                }
+                40% {
+                    transform: translateX(-200px);
+                    background-image: url(./images/cat/3.png);
+                }
+                60% {
+                    transform: translateX(-300px);
+                    background-image: url(./images/cat/1.png);
+                }
+                80% {
+                    transform: translateX(-400px);
+                    background-image: url(./images/cat/2.png);
+                }
+                100% {
+                    transform: translateX(-500px);
+                    background-image: url(./images/cat/3.png);
+                }
+            }
+
+            .cat {
+                width: 313px;
+                height: 436px;
+                position: absolute;
+                left: 600px;
+
+                animation-name: move-cat;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cat"></div>
+    </body>
+</html>

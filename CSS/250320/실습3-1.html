@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS animation 실습3 풀이</title>
+        <style>
+            @keyframes move-watch {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .container {
+                width: 400px;
+                height: 400px;
+                border: solid 20px orange;
+                border-radius: 50%;
+
+                position: relative;
+            }
+
+            .container div {
+                width: 10px;
+                height: 150px;
+                background-color: black;
+
+                position: absolute;
+                top: 50px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                animation-name: move-watch;
+                transform-origin: center bottom;
+                animation-iteration-count: infinite;
+                animation-timing-function: steps(60);
+            }
+
+            .container .sec {
+                background-color: salmon;
+                animation-duration: 1s;
+            }
+
+            .container .min {
+                background-color: lightseagreen;
+                animation-duration: 60s;
+                height: 120px;
+                top: 80px;
+            }
+
+            .container .hour {
+                animation-duration: 200s;
+                height: 90px;
+                top: 110px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="sec"></div>
+            <div class="min"></div>
+            <div class="hour"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS animation 실습2</title>
+        <style>
+            @keyframes cat {
+                0% {
+                    background: url(./images/cat/1.png) no-repeat 0 0 / auto 100%;
+                    background-position: 100px;
+                }
+                20% {
+                    background: url(./images/cat/2.png) no-repeat 0 0 / auto 100%;
+                    background-position: 200px;
+                }
+                40% {
+                    background: url(./images/cat/3.png) no-repeat 0 0 / auto 100%;
+                    background-position: 300px;
+                }
+                60% {
+                    background: url(./images/cat/2.png) no-repeat 0 0 / auto 100%;
+                    background-position: 400px;
+                }
+                80% {
+                    background: url(./images/cat/1.png) no-repeat 0 0 / auto 100%;
+                    background-position: 500px;
+                }
+                100% {
+                    background: url(./images/cat/2.png) no-repeat 0 0 / auto 100%;
+                    background-position: 600px;
+                }
+            }
+
+            .box {
+                width: 1000px;
+                height: 436px;
+                background: url(./images/cat/1.png) no-repeat 0 0 / auto 100%;
+                background-position: 0;
+
+                animation-name: cat;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>

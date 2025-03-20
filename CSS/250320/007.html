@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS perspective</title>
+        <style>
+            .container {
+                perspective: 1000px;
+            }
+
+            .item {
+                width: 200px;
+                height: 200px;
+                background-color: aquamarine;
+                transform: rotateY(45deg);
+
+                transform-style: preserve-3d;
+            }
+
+            .item::after {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 50%;
+                background-color: tomato;
+
+                transform: translateZ(400px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item"></div>
+        </div>
+    </body>
+</html>

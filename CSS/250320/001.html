@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS animation</title>
+        <style>
+            @keyframes move-box {
+                /* from {
+                }
+                to {
+                } */
+                0% {
+                    background-color: lightgreen;
+                    transform: translate(0, 0);
+                }
+                100% {
+                    background-color: lightseagreen;
+                    transform: translate(300px, 0);
+                }
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: lightcoral;
+
+                animation-name: move-box;
+
+                /* 애니메이션의 한 사이클 도는데 걸리는 시간 */
+                animation-duration: 3s;
+
+                /* 애니메이션의 진행속도 제어 */
+                /* animation-timing-function: linear;
+                animation-timing-function: cubic-bezier(1,-0.43, 0, 1.29);
+                animation-timing-function: steps(4); */
+
+                /* 애니메이션의 시작지점 설정 */
+                animation-delay: 3s;
+                /* animation-delay: -1s; */
+
+                /* 애니메이션의 재생 횟수 */
+                /* animation-iteration-count: 3; */
+                animation-iteration-count: infinite;
+
+                /* 애니메이션의 재생 방향 */
+                /* animation-direction: reverse;
+                animation-direction: alternate;
+                animation-direction: alternate-reverse; */
+
+                /* 애니메이션 실행 전과 후 스타일 지정 */
+                animation-fill-mode: forwards;
+                animation-fill-mode: backwards;
+                animation-fill-mode: both;
+            }
+
+            .box:hover {
+                animation-play-state: paused;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+
+        </div>
+    </body>
+</html>
