@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 함수</title>
+        <style>
+            div {
+                background-color: lightcoral;
+                height: 100px;
+                margin: auto;
+
+                width: 1400px;
+                /* css의 속성 값을 계산할 때 사용하는 함수, 서로 다른 단위끼리 계산 가능, 연산자 좌우에 공백 유지 */
+                /* max-width: calc(100% - 60px); */
+
+                /* 여러 값 중 최소값 또는 최대값을 선택하는 함수 */
+                width: min(600px, 90%);
+                width: max(600px, 90%);
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            li {
+                list-style: none;
+                background-color: lightgreen;
+                float: left;
+                width: calc((100% - (50px * 2)) / 3);
+                /* 선호값이 최소값, 최대값 범위 사이에 있으면 선호값 */
+                /* 선호값이 최소값보다 작으면 최소값 */
+                /* 선호값이 최대값보다 크면 최대값 */
+                font-size: clamp(1rem, 2.5vw, 3rem);
+            }
+
+            li:not(:first-child) {
+                margin-left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <ul>
+            <li>1. 일어나기</li>
+            <li>2. 이불정리하기</li>
+            <li>3. 고양이 모래 치우기</li>
+        </ul>
+    </body>
+</html>

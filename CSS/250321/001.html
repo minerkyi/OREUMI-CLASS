@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS perspective</title>
+        <style>
+            @keyframes rotate {
+                to {
+                    transform: translate(-50%, -50%) rotateY(1turn);
+                }
+            }
+            
+            /* 원의 둘레 = 340px * 7 */
+            /* 원의 반지름 = 원주 / 파이 / 2 */
+            :root {
+                --translateZ: calc((340px * 7) / 3.14 / 2);
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            div {
+                height: 100vh;
+                perspective: 800px;
+            }
+
+            .list-item {
+                width: 340px;
+                height: 400px;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transform-style: preserve-3d;
+                animation: rotate 10s infinite linear;
+            }
+
+            .list-item li {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                border: solid 1px darkgray;
+                border-radius: 15px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+                background: white;
+                backface-visibility: hidden;
+            }
+
+            .list-item li img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            li:nth-child(1) {
+                transform: rotateY(0) translateZ(var(--translateZ));
+            }
+
+            li:nth-child(2) {
+                transform: rotateY(calc(360deg / 7)) translateZ(var(--translateZ));
+            }
+
+            li:nth-child(3) {
+                transform: rotateY(calc(360deg / 7 * 2)) translateZ(var(--translateZ));
+            }
+
+            li:nth-child(4) {
+                transform: rotateY(calc(360deg / 7 * 3)) translateZ(var(--translateZ));
+            }
+
+            li:nth-child(5) {
+                transform: rotateY(calc(360deg / 7 * 4)) translateZ(var(--translateZ));
+            }
+
+            li:nth-child(6) {
+                transform: rotateY(calc(360deg / 7 * 5)) translateZ(var(--translateZ));
+            }
+
+            li:nth-child(7) {
+                transform: rotateY(calc(360deg / 7 * 6)) translateZ(var(--translateZ));
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <ul class="list-item">
+                <li><img src="./images/ev.png" alt=""></li>
+                <li><img src="./images/jammanbo.png" alt=""></li>
+                <li><img src="./images/mazayoung.png" alt=""></li>
+                <li><img src="./images/mobugi.png" alt=""></li>
+                <li><img src="./images/nyaong.png" alt=""></li>
+                <li><img src="./images/pulin.png" alt=""></li>
+                <li><img src="./images/weirdseed.png" alt=""></li>
+            </ul>
+        </div>
+    </body>
+</html>

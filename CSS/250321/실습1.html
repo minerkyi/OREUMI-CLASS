@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS perspective 실습1</title>
+        <style>
+            .card {
+                position: relative;
+                width: 200px;
+                height: 300px;
+                transform-style: preserve-3d;
+                transition: all 1s;
+                top: 30px;
+                left: 30px;
+            }
+
+            .card:hover {
+                transform: perspective(800px) scale3d(1.3, 1.3, 1.3) rotateY(1.5turn);
+            }
+
+            .front,
+            .back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .front {
+                background-color: lightskyblue;
+            }
+
+            .back {
+                background-color: lightyellow;
+                transform: rotateY(180deg);
+            }
+
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="front">
+                <img src="./images/weniv-binky.png" alt="">
+                <p>FE Developer</p>
+            </div>
+            <div class="back">
+                <img src="./images/weniv-garry.png" alt="">
+                <p>FE Developer</p>
+            </div>
+        </div>
+    </body>
+</html>

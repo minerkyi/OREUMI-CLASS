@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS perspective 실습1 풀이</title>
+        <style>
+            body {
+                background-color: #eee;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .wrap {
+                padding: 50px;
+            }
+
+            .card {
+                width: 200px;
+                height: 300px;
+
+                transform: perspective(400px);
+                transform-style: preserve-3d;
+
+                position: relative;
+
+                transition: all 1s linear;
+            }
+
+            .front,
+            .back {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                backface-visibility: hidden;
+            }
+
+            .front {
+                background-color: hotpink;
+            }
+
+            .back {
+                background-color: lightseagreen;
+                transform: rotateY(180deg);
+            }
+
+            .wrap:hover .card {
+                transform: perspective(400px) scale(1.5) rotateY(900deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="card">
+                <div class="front">앞면</div>
+                <div class="back">뒷면</div>
+            </div>
+        </div>
+    </body>
+</html>
