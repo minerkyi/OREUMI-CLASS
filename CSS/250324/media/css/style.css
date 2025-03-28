@@ -1,0 +1,168 @@
+@font-face {
+    font-family: "SpoqaHanSansNeo-Regular";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --main-color: #121314;
+    --sub-color: #47494D;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "SpoqaHanSansNeo-Regular";
+    color: var(--main-color);
+}
+
+.wrap {
+    width: 120rem;
+    display: grid;
+    grid-template-columns: 61.2rem 48.3rem;
+    grid-template-rows: repeat(2, 28rem);
+    gap: 2rem 10.2rem;
+
+    margin: 24rem auto 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.info {
+    grid-area: 1/1/3/2;
+}
+
+.info h1 {
+    font-size: 7rem;
+    line-height: 8.8rem;
+}
+
+.info p {
+    margin-top: 2rem;
+    color: var(--sub-color);
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.contents,
+.books {
+    border-radius: 20px;
+    background: url(../img/Rectangle\ 2.png) no-repeat center center / cover;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15.2rem;
+}
+
+.books {
+    background-image: url(../img/Rectangle\ 3.png);
+}
+
+.contents h2,
+.books h2 {
+    color: #fff;
+    font-size: 3rem;
+    padding: 4rem 0 0 4rem;
+}
+
+.contents a,
+.books a {
+    color: #fff;
+    font-size: 1.6rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    justify-content: right;
+    align-items: center;
+    padding-right: 3rem;
+}
+
+@media(max-width: 1919px) {
+    .wrap {
+        max-width: calc(100% - 6rem);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 19.8rem;
+        gap: 6rem 2rem;
+
+        margin: 10rem auto 0;
+    }
+
+    .info {
+        grid-area: 1/1/2/3;
+    }
+    
+    .info h1 {
+        font-size: 7rem;
+    }
+
+    .info p {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+
+    .contents,
+    .books {
+        gap: 9.8rem;
+    }
+
+    .contents h2,
+    .books h2 {
+        font-size: 2.4rem;
+        padding: 3rem 0 0 3rem;
+    }
+    
+    .contents a,
+    .books a {
+        font-size: 1.6rem;
+        padding-right: 2rem;
+    }
+}
+
+@media(max-width: 767px) {
+    .wrap {
+        max-width: calc(100% - 3.2rem);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr repeat(2, 20.5rem);
+        gap: 1.4rem;
+
+        margin: 10rem auto 0;
+    }
+
+    .info {
+        grid-area: 1/1/2/2;
+        padding-right: 4.3rem;
+    }
+    
+    .info h1 {
+        font-size: 3.6rem;
+        line-height: 4.5rem;
+    }
+
+    .info p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-bottom: 2.6rem;
+    }
+
+    .contents,
+    .books {
+        gap: 11.2rem;
+    }
+
+    .contents h2,
+    .books h2 {
+        font-size: 2rem;
+    }
+    
+    .contents a,
+    .books a {
+        font-size: 1.4rem;
+        gap: 0.2rem;
+    }
+}
