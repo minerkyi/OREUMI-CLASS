@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tailwind</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+        <!-- 레드가 블루보다 우선순위가 높다. 알파벳 순으로 정의되기 때문에 후자 우선의 원칙에 의해 레드가 적용 -->
+        <div class="grid grid-cols-4 gap-1">
+            <div class="w-10 h-10 bg-blue-500 bg-red-500"></div>
+            <div class="w-10 h-10 bg-red-500 bg-blue-500"></div>
+            <div class="w-10 h-10 bg-blue-300 bg-red-300"></div>
+            <div class="w-10 h-10 bg-red-300 bg-blue-300"></div>
+        </div>
+
+        <div class="grid grid-cols-10 gap-1">
+            <div class="bg-lime-100 aspect-square"></div>
+            <div class="bg-lime-200"></div>
+            <div class="bg-lime-300"></div>
+            <div class="bg-lime-400"></div>
+            <div class="bg-lime-500"></div>
+            <div class="bg-lime-600"></div>
+            <div class="bg-lime-700"></div>
+            <div class="bg-lime-800"></div>
+            <div class="bg-lime-900"></div>
+            <div class="bg-lime-1000"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tailwind</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+        <!-- 폰트 사이즈 -->
+        <div class="text-base">hello world</div>
+        <div class="text-lg">hello world</div>
+        <div class="text-xl">hello world</div>
+        <div class="text-2xl">hello world</div>
+
+        <!-- padding -->
+        <div class="text-2xl p-4">hello world</div>
+        <div class="text-2xl pt-4">hello world</div>
+        <div class="text-2xl pb-4">hello world</div>
+        <div class="text-2xl pr-4">hello world</div>
+        <div class="text-2xl pl-4">hello world</div>
+
+        <!-- margin -->
+        <div class="text-2xl m-4">hello world</div>
+        <div class="text-2xl mt-4">hello world</div>
+        <div class="text-2xl mb-4">hello world</div>
+        <div class="text-2xl mr-4">hello world</div>
+        <div class="text-2xl ml-4">hello world</div>
+        <!-- 상하, 좌우 -->
+        <div class="text-2xl my-4">hello world</div>
+        <div class="text-2xl mx-4">hello world</div>
+
+        <div class="p-5 bg-blue-200">
+            <ul>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+            </ul>
+        </div>
+
+        <div class="p-5 bg-blue-200">
+            <ul class="list-disc">
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+            </ul>
+        </div>
+
+        <div class="p-5 bg-blue-200">
+            <ul class="list-decimal">
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+            </ul>
+        </div>
+
+        <div class="p-5 bg-blue-200">
+            <ul>
+                <li class="list-decimal">list</li>
+                <li class="list-disc">list</li>
+                <li>list</li>
+            </ul>
+        </div>
+
+        <div class="w-40 h-40 bg-red-200"></div>
+        <div class="w-40 h-40 bg-red-200 rounded"></div>
+        <div class="w-40 h-40 bg-red-200 rounded-lg"></div>
+        <div class="w-40 h-40 bg-red-200 rounded-full"></div>
+
+        <!-- 사용자가 커스터마이징 -->
+        <div class="text-[17px]">hello world</div>
+        <div class="mt-[17px]">hello world</div>
+        <div class="bg-[#dbdbdb]">hello world</div>
+    </body>
+</html>

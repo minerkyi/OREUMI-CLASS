@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tailwind 실습1</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+        <div class="grid grid-cols-2 grid-row-2 gap-x-5 gap-y-10 my-10 mx-20 justify-items-center w-[620px] relative">
+            <div class="col-span-2">
+                <h1 class="text-4xl font-bold">요금제 선택</h1>
+            </div>
+            <div class="py-10 px-5 rounded-lg shadow-lg border-gray-100 border-solid border">
+                <h2 class="text-xl font-bold text-center">기본</h2>
+                <p class="text-gray-400 text-sm font-bold text-center mt-3">개인 사용자에게 적합</p>
+                <p class="text-4xl font-bold text-center mt-5">₩9,900<span class="text-gray-400 text-sm font-bold">/월</span></p>
+                <ul class="text-left mt-5 flex flex-col gap-3">
+                    <li class="text-md font-bold"><span class="text-xs">✔</span> 기본 기능 이용</li>
+                    <li class="text-md font-bold"><span class="text-xs">✔</span> 5GB 저장 공간</li>
+                    <li class="text-md font-bold"><span class="text-xs">✔</span> 이메일 지원</li>
+                </ul>
+                <button class="bg-[#1E2A39] w-3xs h-[50px] text-white rounded-lg shadow-lg mt-5">가입하기</button>
+            </div>
+            <div class="py-10 px-5 rounded-lg shadow-lg border-[#2A80FF] border-solid border-2">
+                <h2 class="text-xl font-bold text-center">표준</h2>
+                <p class="text-gray-400 text-sm font-bold text-center mt-3">소규모 팀에게 적합</p>
+                <p class="text-4xl font-bold text-center mt-5">₩19,900<span class="text-gray-400 text-sm font-bold">/월</span></p>
+                <ul class="text-left mt-5 flex flex-col gap-3">
+                    <li class="text-md font-bold"><span class="text-xs">✔</span> 모든 기본 기능</li>
+                    <li class="text-md font-bold"><span class="text-xs">✔</span> 20GB 저장 공간</li>
+                    <li class="text-md font-bold"><span class="text-xs">✔</span> 우선 이메일 지원</li>
+                    <li class="text-md font-bold"><span class="text-xs">✔</span> 5명까지 팀원 추가</li>
+                </ul>
+                <button class="bg-[#155CFB] w-3xs h-[50px] text-white rounded-lg shadow-lg mt-5">가입하기</button>
+            </div>
+            <p class="flex justify-center items-center bg-[#2A80FF] w-30 h-8 text-white rounded-2xl absolute top-16 left-103">인기 요금제</p>
+        </div>
+    </body>
+</html>
