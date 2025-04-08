@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <style>
+            #parent {
+                border: 2px solid red;
+            }
+            #parent {
+                background-color: lightblue;
+            }
+            #parent li {
+                border: 3px solid yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="parent">
+            <ul>
+                <li><button>버튼1</button></li>
+                <li><button>버튼2</button></li>
+                <li><button>버튼3</button></li>
+            </ul>
+        </section>
+        <script>
+            // 이벤트 위임
+            // 부모 요소에 이벤트 등록 -> 자식 요소의 이벤트를 처리하는 것
+            // target 속성으로 어떤 요소에서 이벤트가 발생했는지
+            const $parent = document.getElementById('parent');
+            $parent.addEventListener('click', (e) => {
+                // console.log('target:', e.target);
+                // console.log(e.target.tagName);
+                if(e.target.tagName === 'BUTTON') {
+                    console.log('버튼이 클릭되었습니다', e.target.innerText);
+                }
+                if(e.target.tagName === 'LI') {
+                    console.log('리스트 아이템이 눌렸습니다.');
+                }
+                // 1. 동적으로 추가된 요소에 동일한 이벤트 적용
+                // 2. 메모리 사용을 줄일 수 있다.
+            });
+
+            // addEventListener로 이벤트를 등록하는 요소: 부모 요소
+            // 이벤트 핸들러 함수 안에서 이벤트가 발생한 자식 요소 event.target
+            // event.target.className, event.target.tagName, event.target.id
+        </script>
+    </body>
+</html>

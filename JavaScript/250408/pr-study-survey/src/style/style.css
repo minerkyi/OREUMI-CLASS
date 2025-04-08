@@ -1,0 +1,86 @@
+@import "./normalize.css";
+
+#app {
+    width: 680px;
+    margin: auto;
+}
+
+#app h1 {
+    text-align: center;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    border: none;
+}
+fieldset > label:first-child {
+    font-weight: bold;
+}
+
+.checkbox-group,
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.checkbox-group label,
+.radia-group label {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.btn-group button {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: none;
+    background-color: dodgerblue;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-group button:disabled {
+    background-color: #bdbdbd;
+    cursor: inherit;
+}
+
+/* 모달 스타일링 */
+#result-modal {
+    width: 480px;
+    position: relative;
+}
+
+#result-modal h2 {
+    text-align: center;
+}
+
+#result-list,
+#result-list li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#result-list li {
+    padding: 4px;
+    border: 1px solid red;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}

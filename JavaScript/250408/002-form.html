@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <style>
+            #login-form {
+              display: flex;
+              flex-direction: column;
+              width: 360px;
+              height: 480px;
+              margin: 40px auto;
+              gap: 10px;
+            }
+            .input-cont {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+            }
+            label {
+              width: 100px;
+            }
+            #id-input,
+            #pw-input {
+              width: 100%;
+            }
+          </style>
+    </head>
+    <body>
+    <form action="get" id="login-form">
+      <div class="input-cont">
+        <label for="id"> 아이디 </label>
+        <input type="text" name="id" id="id-input" />
+      </div>
+      <div class="input-cont">
+        <label for="pw"> 비밀번호 </label>
+        <input type="password" name="pw" id="pw-input" />
+      </div>
+      <button id="login-btn">로그인</button>
+      <button type="button" id="click-btn">클릭해보세요</button>
+    </form>
+
+    <script>
+        const $loginForm = document.getElementById("login-form");
+        const $idInput = document.getElementById('id-input');
+        const $pwInput = document.getElementById('pw-input');
+
+        $loginForm.addEventListener('submit', (e) => {
+            // form 안의 입력창에 엔터를 눌렀거나
+            // submit type의 버튼을 클릭했을 때
+            e.preventDefault(); // form 새로고침을 막을 수 있다.
+            alert('form이 제출되었습니다.');
+        });
+
+        // change: 입력이 있고 포커스가 해제되었을 때
+        $idInput.addEventListener('change', () => {
+            console.log('change:', $idInput.value);
+        });
+
+        // input: 입력이 있을 때마다 발생하는 이벤트
+        $pwInput.addEventListener('input', () => {
+            console.log('input:', $pwInput.value);
+            if($pwInput.value.length > 10) {
+                // 로그인이 가능하게 버튼을 활성화
+            }
+        });
+
+        // focus: 요소에 포커싱
+        $idInput.addEventListener('focus', () => {
+            console.log('focus:', $idInput.value);
+        });
+
+        // blur: 요소에 포커싱 해제
+        $idInput.addEventListener('blur', () => {
+            console.log('blur:', $idInput.value);
+        });
+    </script>
+  </body>
+</html>

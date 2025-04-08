@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>DOM 요소 탐색 예제</h1>
+            <section>
+                <div class="section">
+                    <h2>메서드 목록</h2>
+                    <ul class="method-list">
+                        <li>a. parentElement</li>
+                        <li>1. children</li>
+                        <li>2. firstChild</li>
+                        <li class="target">
+                            3. firstElementChild
+                            <p class="section">섹션</p>
+                        </li>
+                        <li>4. lastChild</li>
+                        <li>5. lastElementChild</li>
+                    </ul>
+                </div>
+            </section>
+            <div class="section">
+                <h2>비어있는 섹션</h2>
+            </div>
+        </div>
+        <script>
+            // 1. 부모 요소 parentElement
+            const $mehtodList = document.querySelector('.method-list');
+            console.log($mehtodList.parentElement);
+
+            // 최상위 요소(html)에서 부모 요소를 접근 null
+            const $htmlElement = $mehtodList.parentElement.parentElement.parentElement.parentElement;
+            console.log($htmlElement.parentElement);
+
+            // 2. 자식 요소
+            // children
+            const $children = $mehtodList.children;
+            /**
+             * $children이 변경 
+            */
+            console.log($children); // HTMLCollection
+            
+            // childNodes
+            // 실시간으로 반영
+            console.log($mehtodList.childNodes);
+
+            // firstChild, firstElementChild
+            const $firstChild = $mehtodList.firstChild;
+            const $firstElementChild = $mehtodList.firstElementChild;
+            console.log('firstChild:', $firstChild); // node
+            console.log('firstElementChild:', $firstElementChild); // element(html 요소)
+
+            // lastChild, lastElementChild
+            const $lastChild = $mehtodList.lastChild;
+            const $lastElementChild = $mehtodList.lastElementChild;
+            console.log('lastChild:', $lastChild); // node
+            console.log('lastElementChild:', $lastElementChild); // element(html 요소)
+
+            // 3. 형제 요소
+            const $target = document.querySelector('.target');
+            $target.style.backgroundColor = 'royalblue';
+            console.log($target);
+
+            // previousElement
+            const $previousElement = $target.previousElementSibling;
+            console.log(
+                $previousElement.previousElementSibling.previousElementSibling.previousElementSibling
+            );
+
+            // nextElementSibling
+            const $nextElement = $target.nextElementSibling;
+            console.log($nextElement.nextElementSibling.nextElementSibling);
+
+            // 형제 요소 가져오기
+            // 부모 요소의 자식 요소를 가져옵니다.
+            const $siblings = $target.parentElement.children;
+            console.log($siblings);
+            console.log('===== siblings =====');
+            Array.from($siblings).forEach((el) => {
+                // el이 $target이 아닐 때만 출력
+                el !== $target && console.log(el); // 논리식 단축평가
+
+                /*
+                if(el !== $target) {
+                    console.log(el);
+                }
+                */
+            });
+
+            // closest
+            // 선택자와 일치하는 가장 가까운 조상 요소를 찾는다.
+            const $closestElement = $target.closest('section.section');
+            console.log($closestElement);
+        </script>
+    </body>
+</html>

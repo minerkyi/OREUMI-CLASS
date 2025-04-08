@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript stopPropagation</title>
+    </head>
+    <body>
+        <section id="parent">
+            <button id="click-btn">클릭</button>
+        </section>
+        
+        <script>
+            const $parent = document.getElementById('parent');
+            const $clickBtn = document.getElementById('click-btn');
+
+            // stopPropagation: 이벤트의 전파를 중단, 이벤트의 흐름을 멈춘다
+            $parent.addEventListener('click', (e) => {
+                e.stopImmediatePropagation();
+                console.log('parent가 클릭되었습니다');
+            });
+            
+            $clickBtn.addEventListener('click', (e) => {
+                // e.stopPropagation();
+                console.log('clickBtn가 클릭되었습니다.');
+            });
+
+            // 기본적으로 사용하는 이벤트 버블링
+            // 자식요소(stopPropagation) -> 부모요소
+
+            $parent.addEventListener('click', () => {
+                console.log('parent가 클릭되었습니다2');
+            });
+        </script>
+    </body>
+</html>

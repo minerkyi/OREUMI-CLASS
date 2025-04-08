@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <style>
+            section#parent {
+                background-color: pink;
+                /* height: 200vh; */
+            }
+
+            #outer {
+                border: 1px solid black;
+            }
+            #inner {
+                margin: 20px;
+                background-color: powderblue;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="parent">
+            <ul class="button-list">
+                <li><button id="btn1">버튼1</button></li>
+                <li><button id="btn2">버튼2</button></li>
+            </ul>
+        </section>
+
+        <section id="bubble">
+            <div id="outer">
+                <div id="inner">마우스를 올려보세요</div>
+            </div>
+        </section>
+        <script src="./script.js"></script>
+    </body>
+</html>
