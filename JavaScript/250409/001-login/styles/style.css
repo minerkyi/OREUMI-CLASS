@@ -1,0 +1,113 @@
+@import "./normalize.css";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+/* utils */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+#login-section {
+    width: 520px;
+    border: 1px solid #c4c4c4;
+    margin: 40px auto;
+    padding: 26px 24px;
+}
+
+#login-section .intro-text {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 800;
+    margin: 0;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#username, #password {
+    padding: 15px 16px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+#username.error, #password.error {
+    border: 1px solid #f4492e;
+}
+#username.error:focus,
+#password.error.focus {
+    outline: 1px solid #f4492e;
+}
+#username::placeholder,
+#password::placeholder {
+    font-weight: 400;
+    color: #767676;
+}
+
+.error-message {
+    font-size: 14px;
+    font-weight: 400;
+    color: #f4492e;
+    margin-left: 4px;
+    display: none;
+}
+
+/* 속성을 이용해서 요소를 선택: [속성명=속성값] */
+label[for="remember"] {
+    font-size: 16px;
+    font-weight: 500;
+    color: #767676;
+    width: fit-content;
+
+    margin: 6px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+label[for="remember"]::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: url("../images/check-box.svg");
+}
+label[for="remember"].checked::before {
+    background: url("../images/check-box-fill.svg");
+}
+
+#remember {
+    display: none;
+}
+
+#login-btn {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #fff;
+    padding: 14px;
+    background: #2f80ed;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#login-btn:hover {
+    background: #1766cd;
+}

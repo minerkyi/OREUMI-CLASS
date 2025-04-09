@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/style.css">
+        <title>JavaScript 실습 TODO</title>
+    </head>
+    <body>
+        <div class="todo-container">
+            <h1 class="todo-title">투두리스트</h1>
+        
+            <form class="todo-form" id="todo-form">
+                <input
+                type="text"
+                class="todo-input"
+                id="todo-input"
+                placeholder="할 일을 입력하세요"
+                autocomplete="off"
+                required
+                />
+                <button type="submit" class="todo-add-btn" id="todo-add-btn">
+                추가
+                </button>
+            </form>
+        
+            <div class="todo-count">
+                <div>전체 할 일: <span id="total-todo">0</span>개</div>
+                <div>남은 할 일: <span id="rest-todo">0</span>개</div>
+            </div>
+        
+            <ul class="todo-list" id="todo-list">
+                <!-- 투두 아이템들이 여기에 동적으로 추가됩니다 -->
+            </ul>
+        </div>
+        
+        <script src="./js/script.js"></script>
+    </body>
+</html>
