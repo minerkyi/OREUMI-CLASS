@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <button onclick="renderTable(JSON.parse(json))">데이터 호출!</button>
+        <table id="renderingDataTable">
+            <thead>
+                <tr>
+                <th onclick="sort('_id')">_id</th>
+                <th onclick="sort('age')">age</th>
+                <th onclick="sort('eyeColor')">eyeColor</th>
+                <th onclick="sort('name')">name</th>
+                <th onclick="sort('gender')">gender</th>
+                <th onclick="sort('email')">email</th>
+                <th onclick="sort('phone')">phone</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script src="./006-practice.js"></script>
+    </body>
+</html>
