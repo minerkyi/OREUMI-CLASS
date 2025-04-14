@@ -11,6 +11,92 @@ const $usernameError = document.getElementById('username-error');
 const $passwordError = document.getElementById('password-error');
 const $loginError = document.getElementById('login-error');
 
+const API_URL = 'https://dev.wenivops.co.kr/services/fastapi-crud'
+
+function signup(username, password) {
+    fetch(`${API_URL}/1/signup`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            username: username,
+            password: password
+        })
+    }).then((response) => {
+        if(!response.ok) {
+            throw new Error('회원가입 실패');
+        }
+        return response.json();
+    }).then((data) => {
+        console.log(data.message);
+    }).catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
+function getUserList() {
+    fetch(`${API_URL}/1/login_user_info`).then((response) => {
+        if(!response.ok) {
+            throw new Error('유저 정보 조회에 실패했습니다.');
+        }
+        return response.json();
+    }).then((data) => {
+        console.log(data);
+    }).catch((error) => {
+        console.error('유저 정보 조회 오류:', error);
+    });
+}
+
+async function login(username, password) {
+    try {
+        const response = await fetch(`${API_URL}/1/login`, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({username, password})
+        });
+
+        if(!response.ok) {
+            throw new Error('로그인에 실패했습니다.');
+        }
+        
+        const data = await response.json();
+        if(data?.message === 'Login success') {
+            alert(`환영합니다! ${username}님!`);
+        } else {
+            $loginError.innerText = '아이디 혹은 비밀번호가 일치하지 않습니다.';
+            $loginError.style.display = 'block';
+        }
+    } catch(error) {
+        console.log('Error:', error);
+        $loginError.innerText = '아이디 혹은 비밀번호가 일치하지 않습니다.';
+        $loginError.style.display = 'block';
+    }
+}
+
+// function login(username, password) {
+    // return fetch(`${API_URL}/1/login`, {
+    //     method: 'POST',
+    //     headers: {'Content-Type': 'application/json'},
+    //     body: JSON.stringify({
+    //         username: username,
+    //         password: password
+    //     })
+    // }).then((response) => {
+//         if(!response.ok) {
+//             throw new Error('로그인에 실패했습니다.');
+//         }
+//         return response.json();
+//     }).then((data) => {
+//         console.log(data);
+//         if(data?.message === 'Login success') {
+//             // Login Success
+//             return data;
+//         } else {
+//             // Login failed
+//             throw new Error('아이디 혹은 비밀번호가 일치하지 않습니다.');
+//         }
+//     });
+// }
+
 function loginRequest(username, password) {
     const USER = {
         username: 'weniv',
@@ -80,17 +166,32 @@ $loginForm.addEventListener('submit', (e) => {
         $labelRemember.classList.toggle('checked');
     });
 
+    
+    // 3. 로그인 서버 이용
+    login(username, password); // async, await
+    // login(username, password).then((data) => {
+    //     console.log('로그인 성공', data);
+
+    //     alert(`환영합니다! ${username}님!`);
+    // }).catch((error) => {
+    //     console.error('로그인 실패', error);
+
+    //     $loginError.innerText = '아이디 혹은 비밀번호가 일치하지 않습니다.';
+    //     $loginError.style.display = 'block';
+    // });
+
     // 3. 로그인 시도
     // 아이디와 비밀번호 값이 있을 때 로그인 시도
-    const loginResult = loginRequest(username, password);
+    // const loginResult = loginRequest(username, password);
+    // const loginResult = login(username, password);
 
     // 4. 로그인의 결과
     // 성공: alert
     // 실패: 아이디 혹은 비밀번호가 일치하지 않습니다. 오류 발생
-    if(loginResult) {
-        alert(`환영합니다! ${username}님!`);
-    } else {
-        $loginError.innerText = '아이디 혹은 비밀번호가 일치하지 않습니다.';
-        $loginError.style.display = 'block';
-    }
+    // if(loginResult) {
+    //     alert(`환영합니다! ${username}님!`);
+    // } else {
+    //     $loginError.innerText = '아이디 혹은 비밀번호가 일치하지 않습니다.';
+    //     $loginError.style.display = 'block';
+    // }
 });
