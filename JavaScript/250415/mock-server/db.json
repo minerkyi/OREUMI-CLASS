@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "백경현",
+      "email": "bbb@naver.b",
+      "phone": "01076154078",
+      "id": "e734"
+    },
+    {
+      "id": "ca9a",
+      "name": "백경현",
+      "email": "test12345@example.com",
+      "phone": "01076154078"
+    }
+  ]
+}

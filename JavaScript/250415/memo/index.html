@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript memo</title>
+    </head>
+    <body>
+      <h1>메모 서비스</h1>
+
+      <form id="memo-form">
+        <label for="title-input">제목</label>
+        <input type="text" name="title-input" id="title-input" required>
+        <label for="content-input">내용</label>
+        <textarea name="content-input" id="content-input"></textarea>
+        <button type="submit" id="submit-btn">저장하기</button>
+        <button type="button" id="delete-btn">삭제하기</button>
+      </form>
+      <ul id="memo-list"></ul>
+      <script src="./script.js"></script>
+    </body>
+</html>

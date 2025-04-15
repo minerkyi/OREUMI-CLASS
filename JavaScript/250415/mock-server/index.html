@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사용자 관리 시스템</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="user-container">
+      <h1>사용자 관리 시스템</h1>
+
+      <form class="user-form" id="user-form">
+        <input type="hidden" id="user-id" />
+
+        <label for="name" class="label-cont">이름</label>
+        <input type="text" class="user-input" id="name" required />
+
+        <label for="email" class="label-cont">이메일</label>
+        <input type="email" class="user-input" id="email" required />
+
+        <label for="phone" class="label-cont">전화번호</label>
+        <input type="text" class="user-input" id="phone" />
+
+        <button type="submit" id="submit-btn">추가</button>
+      </form>
+
+      <ul class="user-list" id="users-list">
+        <li class="user-item">
+          <div class="user-info">
+            <div class="user-name">백경현</div>
+            <div class="user-email">hati@weniv.co.kr</div>
+            <div class="user-phone">01000001111</div>
+          </div>
+          <div>
+            <button class="action-btn edit-btn" data-id="a51a">수정</button>
+            <button class="action-btn delete-btn" data-id="a51a">삭제</button>
+          </div>
+        </li>
+        <!-- 사용자 목록이 여기에 동적으로 추가됩니다 -->
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
