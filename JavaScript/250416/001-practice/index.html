@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript practice</title>
+    </head>
+    <body>
+      <h1>계산기 애플리케이션</h1>
+      <label for="num1-input">첫 번째 숫자</label>
+      <input type="text" id="num1-input">
+      <label for="num1-input">두 번째 숫자</label>
+      <input type="text" id="num2-input">
+      <p>계산 결과: <span id="result-text">기본 계산이 가능합니다.</span></p>
+      <section>
+        <p>기본 계산기</p>
+        <button type="button" id="add-btn">더하기</button>
+        <button type="button" id="sub-btn">빼기</button>
+        <button type="button" id="multi-btn">곱하기</button>
+        <button type="button" id="div-btn">나누기</button>
+      </section>
+      <section>
+        <button type="button" id="advance-btn">고급 계산기 기능 활성화</button>
+        <div id="advance-area" style="display:none">
+          <p>고급 계산기</p>
+          <button type="button" id="pow-btn">제곱</button>
+          <button type="button" id="sqrt-btn">제곱근</button>
+        </div>
+      </section>
+      <script type="module" src="./app.js"></script>
+    </body>
+</html>

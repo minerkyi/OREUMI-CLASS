@@ -94,4 +94,4 @@ function formatDate(dateObj) {
   return `${year}년 ${month}월 ${date}일 ${day}, ${hours}시 ${minutes}분`;
 }
 const dayFormatted1 = formatDate(now);
-console.log('>>', dayFormatted1);
+console.log('>>', dayFormatted1);``
