@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+    </head>
+    <body>
+      <script>
+        'use strict';
+        const originalArray = [1, 2, 3, 4, 5];
+
+        function addElement(element) {
+          // originalArray.push(element);
+          return [...originalArray, element];
+        }
+        const newArray = addElement(6);
+
+        const weniv = ['라이캣', '빙키', '개리', '뮤라'];
+        // 결과: ['라이캣💖', '빙키💖', '개리💖', '뮤라💖'];
+        const newWeniv = weniv.map((el) => el + '💖');
+        console.log('weniv', weniv);
+        console.log('newWeniv', newWeniv);
+
+        console.log(0 == '');
+        console.log(0 == '0');
+
+        console.log(0 === '');
+        console.log(0 === '0');
+      </script>
+    </body>
+</html>
