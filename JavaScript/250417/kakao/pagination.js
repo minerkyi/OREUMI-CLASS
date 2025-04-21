@@ -38,7 +38,7 @@ async function searchBook() {
       return;
     }
     renderBook(data?.documents);
-    renderPageNavi(page, data.meta.pageable_count);
+    renderPagination(page, data.meta.pageable_count);
     page++;
   } catch (error) {
     console.error("검색 실패:", error);
@@ -76,12 +76,12 @@ function renderBook(books) {
 // 페이지는 하단에 출력되며 버튼을 클릭하여 해당 페이지의 데이터를 요청합니다.
 
 // 페이지 네비게이션 요소
-const $pageNavigation = document.getElementById('page-navigation');
-$pageNavigation.innerHTML = ''; // 페이지 네비게이션 초기화
+const $pagination = document.getElementById('pagination');
+$pagination.innerHTML = ''; // 페이지 네비게이션 초기화
 
 // 페이지 생성
-function renderPageNavi(currPage, totalPage) {
-  $pageNavigation.innerHTML = '';
+function renderPagination(currPage, totalPage) {
+  $pagination.innerHTML = '';
   // size(10) 크기 기준 현재 페이지 그룹(2 -> 1, 13 -> 2), 최대 페이지
   const currGroupCnt = Math.ceil(currPage / size);
   const maxPageCnt = Math.ceil(totalPage / size);
@@ -125,11 +125,11 @@ function renderPageNavi(currPage, totalPage) {
     docFrag.appendChild($li);
   }
   
-  $pageNavigation.appendChild(docFrag);
+  $pagination.appendChild(docFrag);
 }
 
 // 페이지 숫자 이벤트 등록
-$pageNavigation.addEventListener('click', (e) => {
+$pagination.addEventListener('click', (e) => {
   const $target = e.target;
   if($target.tagName === 'LI') {
     if(!$target.classList.contains('selected')) {
