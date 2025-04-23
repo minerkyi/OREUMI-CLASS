@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+      }
+
+      canvas {
+        border: 1px solid black;
+      }
+
+      .descript {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>스네이크 게임</h1>
+    <p class="score">score: <span id="score">0</span></p>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <div class="descript">
+      <p>방향키를 이용해서 뱀의 이동방향을 조작</p>
+      <p>먹이(피자)를 먹으면 뱀의 길이가 길어지고 점수는 10점 올라갑니다</p>
+      <p>벽이나 자기몸에 머리가 닿으면 게임 종료</p>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
