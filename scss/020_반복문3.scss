@@ -1,0 +1,9 @@
+// 저희 회사에서는 잘 사용하지 않습니다.
+$hojun: 6;
+
+@while $hojun > 1 {
+    .hojun-#{$hojun} {
+        width: $hojun * 10px;
+    }
+    $hojun: $hojun - 1;
+}

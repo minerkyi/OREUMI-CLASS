@@ -1,0 +1,31 @@
+// @mixin center-xy{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .one{
+//     @include center-xy;
+//     width: 100px;
+//     height: 100px;
+//     background-color: red;
+// }
+// .two{
+//     @include center-xy;
+//     width: 100px;
+//     height: 100px;
+//     background-color: blue;
+// }
+
+@mixin flex-xy($position){
+  display: flex;
+  justify-content: $position;
+  align-items: $position;
+}
+
+.one{
+  @include flex-xy(center);
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}

@@ -1,0 +1,31 @@
+.one{
+  font-size: 10px + 10px;
+}
+
+.two{
+  font-size: 10px * 2;
+}
+
+// .three{
+//     font-size: 10px / 2; // 원하는 형식으로 출력이 되지 않음
+// }
+
+// .three{
+//     font-size: (10px / 2px); // px 단위가 없음
+// }
+
+.three{
+  font-size: (10px / 2);
+}
+
+// .three{
+//     font-size: (10 / 2)px; // px 단위가 붙어있지 않음
+// }
+
+.four{
+  font-size: 10px - 2px;
+}
+
+.five{
+  font-size: 10px % 2;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <script>
+    const n = 4;
+    const move = [[0, 1], [1, 0], [0, -1], [-1, 0]]; // [row, col] 이동수
+    const result = Array.from(new Array(n), () => new Array(n).fill(0)); // 이차원 배열 [n][n] 0으로 값을 채워 생성
+    let col = 0; // 열 위치
+    let row = 0; // 행 위치
+    let dir = 0; // 시계방향으로 오른쪽 0, 아래 1, 왼쪽 2, 위 3
+    let num = 1; // 채워질 숫자
+    let nextRow = 0; // 다음 행 위치
+    let nextCol = 0; // 다음 열 위치
+
+    while(num <= n * n) { // n x n 보다 작거나 같은 경우까지 실행
+      result[row][col] = num;
+      nextRow = row + move[dir][0]; // 이동방향에 맞게 row 증가
+      nextCol = col + move[dir][1]; // 이동방향에 맞게 col 증가
+
+      // n x n 크기를 벗어나거나 row, col 위치에 값이 들어간 경우 방향 전환
+      if(nextRow >= n || nextRow < 0 || nextCol >=n || nextCol < 0 || result[nextRow][nextCol] !== 0) {
+        dir = (dir + 1) % 4; // move 방향을 1증가, 나머지 연산으로 초기화 진행
+        // 방향 전환 후 위치 이동
+        nextRow = row + move[dir][0];
+        nextCol = col + move[dir][1];
+      }
+
+      row = nextRow;
+      col = nextCol;
+      num++;
+    }
+    </script>
+    <body></body>
+</html>

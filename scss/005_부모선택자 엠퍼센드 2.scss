@@ -1,0 +1,30 @@
+// .box
+// .box-one
+// .box-two
+// .box-three
+// .box-red
+// .box-green
+// .box-blue
+
+.box {
+  width: 100px;
+  height: 100px;
+  &-one {
+      background-color: red;
+  }
+  &-two {
+      background-color: green;
+  }
+  &-three {
+      background-color: blue;
+  }
+  &-red {
+      background-color: red;
+  }
+  &-green {
+      background-color: green;
+  }
+  &-blue {
+      background-color: blue;
+  }
+}

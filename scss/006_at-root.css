@@ -1,0 +1,12 @@
+.one {
+  color: red;
+}
+.one .two {
+  color: blue;
+}
+.one .two .three {
+  color: green;
+}
+.four {
+  color: pink;
+}/*# sourceMappingURL=006_at-root.css.map */

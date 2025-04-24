@@ -1,0 +1,22 @@
+.box {
+  width: 100px;
+  height: 100px;
+}
+.box-one {
+  background-color: red;
+}
+.box-two {
+  background-color: green;
+}
+.box-three {
+  background-color: blue;
+}
+.box-red {
+  background-color: red;
+}
+.box-green {
+  background-color: green;
+}
+.box-blue {
+  background-color: blue;
+}/*# sourceMappingURL=005_부모선택자 엠퍼센드 2.css.map */

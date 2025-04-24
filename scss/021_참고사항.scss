@@ -1,0 +1,21 @@
+// 여러가지 bulitin function 기능
+
+$font-h1: 2em;
+$font-h2: 1.5em;
+$font-sizes: 10px 20px 30px;
+$font-weight: (
+    thin: 100,
+    medium: 500,
+    bold: 700
+);
+
+//nth(변수명, 인덱스)
+h1 {
+    font-size: nth($font-sizes, 1);
+}
+
+//map-get(변수명, 키값)
+h2 {
+    font-size: 2rem;
+    font-weight: map-get($font-weight, medium);
+}

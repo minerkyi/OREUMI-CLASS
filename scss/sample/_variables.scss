@@ -1,0 +1,56 @@
+// Color Variables
+// Purple
+$w-purple: #964DD1;
+$d-purple: #C893FD;
+
+// Pink 
+$w-pink: #C93864;
+$d-pink: #ED4779;
+
+// Blue
+$w-blue: #2E5DD6;
+$d-blue: #618DFF;
+
+// Green
+$w-green: #328026;
+$d-green: #50C140;
+
+// Orange
+$w-orange: #ED7200;
+$d-orange: #FFA52A;
+
+// SCSS Color Maps
+$color-palette: (
+  'purple': (
+    'w': $w-purple,
+    'd': $d-purple
+  ),
+  'pink': (
+    'w': $w-pink,
+    'd': $d-pink
+  ),
+  'blue': (
+    'w': $w-blue,
+    'd': $d-blue
+  ),
+  'green': (
+    'w': $w-green,
+    'd': $d-green
+  ),
+  'orange': (
+    'w': $w-orange,
+    'd': $d-orange
+  )
+);
+
+// Access colors using map functions
+// Example: map-get(map-get($color-palette, 'purple'), 'w') => #964DD1
+
+// Helper function to get color values
+@function color($color-name, $color-variant) {
+  @return map-get(map-get($color-palette, $color-name), $color-variant);
+}
+
+// Usage examples:
+// color('purple', 'w') => #964DD1
+// color('green', 'd') => #50C140

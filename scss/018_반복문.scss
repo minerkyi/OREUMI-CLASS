@@ -1,0 +1,11 @@
+@for $i from 1 through 5 {
+  .item-#{$i} {
+      color:red;
+  }
+}
+
+@for $i from 1 through 5 {
+  .item-#{$i} {
+      background-image: url("../assets/images/#{$i}.jpg");
+  }
+}

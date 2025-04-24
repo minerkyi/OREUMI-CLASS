@@ -1,0 +1,12 @@
+$value: blue;
+
+.one {
+    $value: red;
+    .two {
+        background-color: $value;
+    }
+}
+
+.three {
+    color: $value;
+}

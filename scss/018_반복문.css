@@ -1,0 +1,39 @@
+.item-1 {
+  color: red;
+}
+
+.item-2 {
+  color: red;
+}
+
+.item-3 {
+  color: red;
+}
+
+.item-4 {
+  color: red;
+}
+
+.item-5 {
+  color: red;
+}
+
+.item-1 {
+  background-image: url("../assets/images/1.jpg");
+}
+
+.item-2 {
+  background-image: url("../assets/images/2.jpg");
+}
+
+.item-3 {
+  background-image: url("../assets/images/3.jpg");
+}
+
+.item-4 {
+  background-image: url("../assets/images/4.jpg");
+}
+
+.item-5 {
+  background-image: url("../assets/images/5.jpg");
+}/*# sourceMappingURL=018_반복문.css.map */

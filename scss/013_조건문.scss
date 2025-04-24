@@ -1,0 +1,9 @@
+$value: 32px;
+
+p {
+    @if ($value > 30px) {
+        font-size: 20px;
+    } @else {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,19 @@
+@debug not true;
+@debug not false;
+// true: 1
+// false: 0
+// or: 더하기
+// and: 곱하기
+@debug true or false; // 1
+@debug true and false; // 0
+
+$value: 32px;
+$color: black;
+
+p {
+  @if($value >= 32px and $color == red) {
+    background-color: blue;
+  } @else {
+    background-color: red;
+  }
+}
