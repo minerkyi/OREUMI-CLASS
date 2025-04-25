@@ -1,0 +1,44 @@
+<h2>post</h2>
+<form action="http://127.0.0.1:8000" method="post">
+    <input type="text" name="username" value="hellopost" />
+    <input type="password" name="password" value="worldpost" />
+    <input type="submit" value="Login" />
+</form>
+
+<h2>GET</h2>
+<form action="http://127.0.0.1:8000" method="get">
+    <input type="text" name="username" value="hellopost" />
+    <input type="password" name="password" value="worldpost" />
+    <input type="submit" value="Login" />
+</form>
+
+<h2>POST - fetch</h2>
+<form action="http://127.0.0.1:8000" method="post">
+    <input type="text" name="username" value="hellopost" />
+    <input type="password" name="password" value="worldpost" />
+    <button type="button" onclick="sendData()">전송</button>
+</form>
+
+<script>
+function sendData() {
+    // form 요소를 가져옴
+    const form = document.getElementById('myForm');
+    const formData = new FormData(form);
+
+    // 직접 통신을 하지 않게 막음
+    event.preventDefault();
+
+    // fetch를 통해 데이터 전송
+    fetch('http://127.0.0.1:8000', {
+    method: 'POST',
+    body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+    console.log('응답:', data);
+    })
+    .catch(error => {
+    console.error('에러:', error);
+    });
+}
+</script>
