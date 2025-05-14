@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>React</title>
+    </head>
+    <body>
+      <div id="root"></div>
+      <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+      <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+      <script type="text/babel">
+        function LinkJSX(num) {
+          return (
+            <li>링크{num}</li>
+          );
+        }
+        const header = (
+          <header>
+            <h1>hello world shop</h1>
+            <nav>
+              <ul>
+                {LinkJSX(1)}
+                {LinkJSX(2)}
+                {LinkJSX(3)}
+                {LinkJSX(4)}
+                {LinkJSX(5)}
+              </ul>
+            </nav>
+          </header>
+        );
+        
+        function ClothesJSX(num) {
+          return (
+            <li>best seller 옷{num}</li>
+          );
+        }
+        const main = (
+          <main>
+            <h2>hello world!</h2>
+            <p>product list</p>
+            <ul>
+              {ClothesJSX(1)}
+              {ClothesJSX(2)}
+              {ClothesJSX(3)}
+              {ClothesJSX(4)}
+              {ClothesJSX(5)}
+              {ClothesJSX(6)}
+              {ClothesJSX(7)}
+              {ClothesJSX(8)}
+              {ClothesJSX(9)}
+              {ClothesJSX(10)}
+            </ul>
+          </main>
+        );
+
+        const footer = (
+          <footer>
+            <h2>hello footer!</h2>
+            <address>제주시 인다 1길</address>
+          </footer>
+        );
+
+        const body = (
+          <div>
+            {header}
+            {main}
+            {footer}
+          </div>          
+        );
+
+        const domContainer = document.querySelector('#root');
+        const root = ReactDOM.createRoot(domContainer);
+        root.render(body);
+      </script>
+    </body>
+</html>
