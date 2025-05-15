@@ -1,0 +1,12 @@
+ul {
+  display: flex;
+  flex-direction: column;
+}
+ul li {
+  border: 1px solid #000;
+  list-style: none;
+}
+.active {
+  color: #fff;
+  background-color: blue;
+}
