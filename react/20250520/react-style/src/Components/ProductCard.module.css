@@ -1,0 +1,39 @@
+.card {
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    background-color: white;
+}
+
+.image {
+  height: 130px;
+  background-color: #f3f4f6;
+  overflow: hidden;
+}
+
+.title {
+  margin: 10px 15px 0;
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.price {
+  margin: 0 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.button {
+  width: 85%;
+  margin: 0 15px;
+  padding: 8px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}

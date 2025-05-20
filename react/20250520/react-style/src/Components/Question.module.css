@@ -1,0 +1,20 @@
+/* div {
+  margin: 40px;
+  background: pink;
+}
+h2 {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: Red;
+} */
+
+.box {
+  background: pink;
+}
+.text {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: lemonchiffon;
+}
