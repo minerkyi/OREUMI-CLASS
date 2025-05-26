@@ -71,7 +71,7 @@ const ProductList = () => {
               <span>{product.category}</span>
             </div>
             <div className="product-value">
-              <strong>{product.price}원</strong>
+              <strong>{product.price.toLocaleString('ko-kr')}원</strong>
               <em>* {product.rating}</em>
             </div>
           </li>
