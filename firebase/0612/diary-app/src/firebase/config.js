@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, Timestamp } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -24,4 +24,7 @@ const appFireStore = getFirestore(app);
 // Initialize fireAuth
 const appAuth = getAuth();
 
-export {app, appFireStore, appAuth};
+// 타임스탬프
+const timeStamp = Timestamp;
+
+export {app, appFireStore, appAuth, timeStamp};
