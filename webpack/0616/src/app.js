@@ -6,4 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.innerHTML = `<img src="${tiger}"/>`;
 });
 
-console.log(plus(2, 3));
+let env;
+
+if(process.env.NODE_ENV === 'development') {
+    env = dev;
+} else {
+    env = pro;
+}
+
+console.log(process.env.NODE_ENV);
+console.log('env : ', env);
